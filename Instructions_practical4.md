@@ -68,7 +68,7 @@ You can read more about Structure in the overview article [here](https://www.fro
 
 ## Running Structure on Galaxy 
 
-Download the structure file from [this link](URL by Emiliano) and upload it to your Galaxy history. Change the format to **tsv** (click on the pencil icon, convert, set **New Type** as **tsv** and save).
+Download the structure file from [this link]([URL by Emiliano](https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/SNPs_mac_TR_SK_CH_pve001_var_832_3pop.tsv)) and upload it to your Galaxy history. Change the format to **tsv** (click on the pencil icon, convert, set **New Type** as **tsv** and save).
 From Tools panel, choose [**Structure** using multi-locus genotype data to investigate population structure](https://usegalaxy.eu/root?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/structure/structure/2.3.4+galaxy1)
 
 Set the following parameters:
