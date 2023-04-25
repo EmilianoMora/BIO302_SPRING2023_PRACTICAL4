@@ -124,7 +124,7 @@ K_5_run_1_f
 K_5_run_2_f
 ```
 
-Now zip all the files together (e.g., select all files and choose 'add to run.zip'). Go to the [CLUMPAK webpage](http://clumpak.tau.ac.il/) and upload the zipped file in **Upload zip file containing STRUCTURE/ADMIXTURE runs**. Give your email address and click on **Submit Form**. This will take a few minutes to run and will give you the results in a PDF file and zip summary. Download them to your computer. Inspect the plots and discuss them among yourselves. There are 5 plots, representing K 1-5. Each horizental bar is one individual and each color is one genetic cluster. What do you understand from the plots? 
+Now zip all the files together (e.g., select all files and choose 'add to run.zip'). Go to the [CLUMPAK webpage](http://clumpak.tau.ac.il/) and upload the zipped file in **Upload zip file containing STRUCTURE/ADMIXTURE runs**. Give your email address and click on **Submit Form**. This will take a few minutes to run and will give you the results in a PDF file and zip summary. Download them to your computer. Inspect the plots and discuss them among yourselves. There are 5 plots, representing K 1-5. Each vertical bar is one individual and each color is one genetic cluster. What do you understand from the plots? 
 
 ## Estimating the best K
 
