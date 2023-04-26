@@ -239,7 +239,8 @@ There are many programs and packages to estimate genetic diversity of a populati
 Today we are going to use the package 'PopGenome'. It stopped been updated a couple of years ago but we can still get the package in the [archive](https://cran.r-project.org/src/contrib/Archive/PopGenome/). If you have not installed the package in Rstudio, you just need to download the file called 'PopGenome_2.7.5.tar.gz' and run the following command:
 
 ```
-install.packages("~/DIRECTORY_YOU_HAVE_THE_FILE/PopGenome_2.7.5.tar.gz", repos=NULL, type="source") library(PopGenome_2.7.5.tar.gz) #To check if it installed correctly
+install.packages("~/DIRECTORY_YOU_HAVE_THE_FILE/PopGenome_2.7.5.tar.gz", repos=NULL, type="source") 
+library(PopGenome_2.7.5.tar.gz) #To check if it installed correctly
 ```
 
 Now we just need to input our VCF. For this part, we will use another VCF file that is very similar the one you have been working on but with some filters that I've done myself. This VCF file has 30 individuals from three populations (RS170=Turkey, RS180=Slovakia, and RSBK01=Swizterland). This file only include SNP data from the first 10mb of the first chromosome. In order to input the file you just need to run the following command:
