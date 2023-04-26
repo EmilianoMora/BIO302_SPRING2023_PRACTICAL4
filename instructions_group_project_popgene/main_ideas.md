@@ -32,11 +32,11 @@ What are you expected to do in this project:
 If there is time (and you are interested):
 - Determine what is the genetic basis of the transition from heterostyly to homostyly
 
-Ask me questions about the analyses and the literature.
+**Ask me any questions about the analyses and the literature.**
 
 ```
 
-For the mapping and variant calling you can look into this tutorial (https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/instructions_group_project_popgene/mapping_variantcall.md). For the VCF filtering and population genetic analyses you can look in the tutorial of practical session 4 (https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/Instructions_practical4.md).
+For the mapping and variant calling you can look into [this tutorial]( https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/instructions_group_project_popgene/mapping_variantcall.md). For the VCF filtering and population genetic analyses you can look in the [tutorial of practical session 4](https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/Instructions_practical4.md).
 
 Key papers to read:
 ```
