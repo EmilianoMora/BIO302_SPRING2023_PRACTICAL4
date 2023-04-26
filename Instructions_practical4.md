@@ -257,6 +257,7 @@ Now we just need to input our VCF. For this part, we will use another VCF file t
 
 ```
 GENOME.class <- readVCF("~/DIRECTORY_YOU_HAVE_THE_FILE/merged_allpops_biallelic_mac_TR_SK_CH_pve001_10mb.vcf.gz",numcols=10, tid="pve_haplotypeT_001", from=1, to=10000000, approx=FALSE, out="", parallel=FALSE, gffpath=FALSE)
+#the *vcf.gz.tbi file needs to beon the same folder. THis file is the index of teh vcf.gz file and helps the program find information more efficiently. 
 ```
 
 Note that the program will require a binary-compressed VCF file (*vcf.gz) and its index (*vcf.gz.tbi) in the same directory and that one needs to specify the chrosome (tid="pve_haplotypeT_001").
@@ -283,7 +284,7 @@ get.sum.data(GENOME.class)
 You can also take a look at specific information such as the number of sites (n.sites) or the number of biallelic sites (n.biallelic.sites) wiht the following commands:
 
 ```
-GENOME.class@n.sitess#number of sites GENOME.class@n.biallelic.sites#number of biallelic sites
+GENOME.class@n.sites#number of sites GENOME.class@n.biallelic.sites#number of biallelic sites
 ```
 
 One could estimate the genetic diversity with the following command:
