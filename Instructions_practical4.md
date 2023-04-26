@@ -317,7 +317,8 @@ GENOME.class <- set.populations(GENOME.class, list(c("RS170_WD04","RS170_WD06","
 Anyway, now that we asigned our individuals to the populations, we can estimate genetic diversity of each population with the following commands:
 
 ```
-GENOME.class <- diversity.stats(GENOME.class) get.diversity(GENOME.class) [[1]] #shows results of genetic diversity in Population 1 get.diversity(GENOME.class) [[2]] #shows results of linkage diversity in Population 2 get.diversity(GENOME.class) [[3]] #shows results of linkage diversity in Population 3
+GENOME.class <- diversity.stats(GENOME.class) 
+get.diversity(GENOME.class) [[1]] #shows results of genetic diversity in Population 1 get.diversity(GENOME.class) [[2]] #shows results of linkage diversity in Population 2 get.diversity(GENOME.class) [[3]] #shows results of linkage diversity in Population 3
 ```
 
 Again, we need to account for the number of sites used in our VCF files so ...
@@ -341,7 +342,8 @@ Another test I didnt mentioned in the class was Tajima's D. The program also giv
 We can also estimate the extent of linkage disequilibrium (LD). Based on the previous results and what we saw on class about genetic bottlenecks, can you make a prediction of the extent of LD that we expect on these three populations?
 
 ```
-GENOME.class <- linkage.stats(GENOME.class) get.linkage(GENOME.class)[[1]] #shows results of recombination tests in Population 1 get.linkage(GENOME.class)[[2]] #shows results of recombination tests in Population 2 get.linkage(GENOME.class)[[3]] #shows results of recombination tests in Population 3
+GENOME.class <- linkage.stats(GENOME.class) 
+get.linkage(GENOME.class)[[1]] #shows results of recombination tests in Population 1 get.linkage(GENOME.class)[[2]] #shows results of recombination tests in Population 2 get.linkage(GENOME.class)[[3]] #shows results of recombination tests in Population 3
 ```
 
 There is a chance that this not run if you don't have enough memory on your computer. What we can do is to reduce the dataset to help our poor computers to run this commands.
