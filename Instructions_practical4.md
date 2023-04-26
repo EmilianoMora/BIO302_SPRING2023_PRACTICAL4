@@ -290,7 +290,8 @@ GENOME.class@n.sites#number of sites GENOME.class@n.biallelic.sites#number of bi
 One could estimate the genetic diversity with the following command:
 
 ```
-GENOME.class <- diversity.stats(GENOME.class) get.diversity(GENOME.class)[[1]] #with this command you see all different estimates of genetic diversity that can be estimated GENOME.class@nuc.diversity.within #with this command you only get the estimate of nucleotide diversity
+GENOME.class <- diversity.stats(GENOME.class) 
+get.diversity(GENOME.class)[[1]] #with this command you see all different estimates of genetic diversity that can be estimated GENOME.class@nuc.diversity.within #with this command you only get the estimate of nucleotide diversity
 ```
 
 Apparently the way nucleotide diversity is estimated in PopGenome still needs to be controlled by the number of sites analyzed. So in this case we need to divide the estimated 'nuc.diversity.within' by 10000000 (the number of sites used in our data).
