@@ -426,4 +426,8 @@ Now we said earlier that Genetic Drift will determine the efficacy of Natural Se
 
 With this we ahve reached the end of our journey into the exciting field of population genomics. You can now go home and have some rest.
 
+**Quick update if you are curious**: In class we talked about how two populations differentiate over time if there is no geneflow. I found a shiny app here [link](https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/shiny_app_GENETIC_DIFFERENTIATION) so that you can play around with this. Just copy and paste the whole command in this link into your Rstudio session. IT should open the shiny app. Play around with the frequencies of the alleles and see how they affect Fst.
+
+**Question:** What increases differentiation among populations?
+
 
