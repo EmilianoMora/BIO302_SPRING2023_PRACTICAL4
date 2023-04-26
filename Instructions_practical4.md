@@ -367,7 +367,8 @@ GENOME.class <- F_ST.stats(GENOME.class) get.F_ST(GENOME.class) #Show all estima
 As you can see, the estimates of genetic differentiation can be quite different from each other. This is because the way we measure genetic differentiation can be biased by the genetic diveristy of the population. For instance Fst can be inflated by low (or high) genetic diveristy of the population, whereas Gst controls for the genetic diversity of each population. See the following results:
 
 ```
-GENOME.class@nucleotide.F_ST #if you want to keep one specific measurement of Fst GENOME.class@Nei.G_ST #if you want to keep one specific measurement of Gst
+GENOME.class@nucleotide.F_ST #if you want to keep one specific measurement of Fst 
+GENOME.class@Nei.G_ST #if you want to keep one specific measurement of Gst
 ```
 
 Another factor that can bias our over-all estimates of genetic diversity is how genetic differentiation changes along the genome. As we saw in class, different genomic regions can have differences in mutarion rate, recombination rate, selection, etc. Also Fst might change between coding and non-coding regions (intronic and intergenic) All this might lead to regions with higher and lower Fst. The message is that collapsing everything together might give an erroneous estimate of Fst. So now we are going to estimate Fst along the genome using sliding windows.
