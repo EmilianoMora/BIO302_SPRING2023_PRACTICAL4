@@ -180,7 +180,7 @@ I suggest you create an Rscript (Ctrl+Shift+N) so that you keep track of everyth
 Now that we have the packages and the directory, we can start by reading the VCF file in R with the following command:
 
 ```
-df <- read.vcfR('./merged_allpops_biallelic_mac_TR_SK_CH_pve001_var_300.vcf', limit = 1e+07, nrows = -1, skip = 0, cols = NULL,
+df <- read.vcfR('./merged_allpops_biallelic_mac_TR_SK_CH_pve001_var_1000.vcf', limit = 1e+07, nrows = -1, skip = 0, cols = NULL,
 convertNA = TRUE, verbose = TRUE)
 ```
 
