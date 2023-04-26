@@ -209,6 +209,8 @@ To do the PCA we need to change the format of the VCF file
 ```
 df_genlight <- vcfR2genlight(df, n.cores = 7)
 
+#You will need to specify the number of axes (eigenvalues) to use.
+
 POPS <-c("RS170","RS170","RS170","RS170","RS170","RS170","RS170","RS170","RS170","RS170",
          "RS180","RS180","RS180","RS180","RS180","RS180","RS180","RS180","RS180","RS180",
          "RSBK01","RSBK01","RSBK01","RSBK01","RSBK01","RSBK01","RSBK01","RSBK01","RSBK01","RSBK01") # Here we create a vector with the population information
