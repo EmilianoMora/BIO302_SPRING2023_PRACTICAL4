@@ -253,7 +253,7 @@ library(PopGenome_2.7.5.tar.gz) #To check if it installed correctly
 
 Now we just need to input our VCF. For this part, we will use another VCF file that is very similar the one you have been working on but with some filters that I've done myself. This VCF file has 30 individuals from three populations (RS170=Turkey, RS180=Slovakia, and RSBK01=Swizterland). This file only include SNP data from the first 10mb of the first chromosome. In order to input the file you just need to run the following command:
 
-**UPDATE: You can find the *vcf.gz file and *.vcf.gz.tbi in the same github page where you found the other files [here](https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/merged_allpops_biallelic_mac_TR_SK_CH_pve001_10mb.vcf.gz) and [here](https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/merged_allpops_biallelic_mac_TR_SK_CH_pve001_10mb.vcf.gz.tbi)**
+**UPDATE: You can find the "vcf.gz" file and ".vcf.gz.tbi" in the same github page where you found the other files [here](https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/merged_allpops_biallelic_mac_TR_SK_CH_pve001_10mb.vcf.gz) and [here](https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/merged_allpops_biallelic_mac_TR_SK_CH_pve001_10mb.vcf.gz.tbi)**
 
 ```
 GENOME.class <- readVCF("~/DIRECTORY_YOU_HAVE_THE_FILE/merged_allpops_biallelic_mac_TR_SK_CH_pve001_10mb.vcf.gz",numcols=10, tid="pve_haplotypeT_001", from=1, to=10000000, approx=FALSE, out="", parallel=FALSE, gffpath=FALSE)
