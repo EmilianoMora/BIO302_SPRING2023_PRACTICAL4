@@ -120,16 +120,7 @@ This generates four outputs:
 
 When running Structure, we need to assume a range of populations or clusters (**K**) and later find out which number of clusters is best explaining the genetic variation in our data. Therefore, **you need to repeat the Structure run again, each time for a different K value (*Number of populations assumed*): K=2, 3, 4 and 5. All other parameters are kept the same as for K=1.**
 
-
-
-
-
 **This part might take a while (~45min) to run in Galaxy so you can move on to the next step "Analzying population structure with: Principal Components Analyses (PCA)" and start working on that and then come back to the STRUCTURE results**
-
-
-
-
-
 
 ## Visualizing the Structure results
 Download the run_K_x.out files to your computer. If they are zipped, unzip them. You should have the following files on your computer:
@@ -188,8 +179,9 @@ I suggest you create an Rscript (Ctrl+Shift+N) so that you keep track of everyth
 Now that we have the packages and the directory, we can start by reading the VCF file in R with the following command:
 
 ```
-df <- read.vcfR('./merged_allpops_biallelic_mac_TR_SK_CH_pve001_var_1000.vcf', limit = 1e+07, nrows = -1, skip = 0, cols = NULL,
-convertNA = TRUE, verbose = TRUE)
+df <- read.vcfR('./merged_allpops_biallelic_mac_TR_SK_CH_pve001_var_1000.vcf', 
+                  limit = 1e+07, nrows = -1, skip = 0, cols = NULL,
+                  convertNA = TRUE, verbose = TRUE)
 ```
 
 Take a quick look on the file with
@@ -327,7 +319,9 @@ Now, we just did the analysis as if all 30 individuals were part of the same pop
 To asign individuals to population in our file (GENOME.class), we can use the following command:
 
 ```
-GENOME.class <- set.populations(GENOME.class, list(c("RS170_WD04","RS170_WD06","RS170_WE03","RS170_WE05","RS170_WE07", "RS170_WE12","RS170_WG02","RS170_WG10","RS170_WG11","RS170_WH09"), c("RS180_WE07","RS180_WE08","RS180_WF01","RS180_WF02","RS180_WF03", "RS180_WF04","RS180_WF05","RS180_WF06","RS180_WF10","RS180_WF11"), c("RSBK01_WA03","RSBK01_WB03","RSBK01_WC07","RSBK01_WD05","RSBK01_WD07", "RSBK01_WD08","RSBK01_WD10","RSBK01_WD11","RSBK01_WF02","RSBK01_WH02")), diploid=TRUE) #basically, we asign the individuals to three different R vector
+GENOME.class <- set.populations(GENOME.class, list(c("RS170_WD04","RS170_WD06","RS170_WE03","RS170_WE05","RS170_WE07", "RS170_WE12","RS170_WG02","RS170_WG10","RS170_WG11","RS170_WH09"), 
+c("RS180_WE07","RS180_WE08","RS180_WF01","RS180_WF02","RS180_WF03", "RS180_WF04","RS180_WF05","RS180_WF06","RS180_WF10","RS180_WF11"), 
+c("RSBK01_WA03","RSBK01_WB03","RSBK01_WC07","RSBK01_WD05","RSBK01_WD07", "RSBK01_WD08","RSBK01_WD10","RSBK01_WD11","RSBK01_WF02","RSBK01_WH02")), diploid=TRUE) #basically, we asign the individuals to three different R vector
 ```
 
 **Question:** Lets assume that RS180 and RSBK01 are from the same population, how would you set up the above command to have two populations instead of three?
@@ -374,9 +368,13 @@ get.linkage(GENOME.class)[[3]] #shows results of recombination tests in Populati
 There is a chance that this not run if you don't have enough memory on your computer. What we can do is to reduce the dataset to help our poor computers to run this commands.
 
 ```
-GENOME.class_small <- readVCF("merged_allpops_biallelic_mac_TR_SK_CH_pve001_10mb.vcf.gz",numcols=10, tid="pve_haplotypeT_001", from=1, to=5000000, approx=FALSE, out="", parallel=FALSE, gffpath=FALSE) #Here we are just reducing the amount of site used from 10 million to 1 million.
+GENOME.class_small <- readVCF("merged_allpops_biallelic_mac_TR_SK_CH_pve001_10mb.vcf.gz",numcols=10, tid="pve_haplotypeT_001", 
+                           from=1, to=5000000, approx=FALSE, out="", parallel=FALSE, gffpath=FALSE) #Here we are just reducing the amount of site used from 10 million to 1 million.
 
-GENOME.class_small <- set.populations(GENOME.class_small, list(c("RS170_WD04","RS170_WD06","RS170_WE03","RS170_WE05","RS170_WE07", "RS170_WE12","RS170_WG02","RS170_WG10","RS170_WG11","RS170_WH09"), c("RS180_WE07","RS180_WE08","RS180_WF01","RS180_WF02","RS180_WF03", "RS180_WF04","RS180_WF05","RS180_WF06","RS180_WF10","RS180_WF11"), c("RSBK01_WA03","RSBK01_WB03","RSBK01_WC07","RSBK01_WD05","RSBK01_WD07", "RSBK01_WD08","RSBK01_WD10","RSBK01_WD11","RSBK01_WF02","RSBK01_WH02")), diploid=TRUE) # we need to asign individuals again
+GENOME.class_small <- set.populations(GENOME.class_small, 
+              list(c("RS170_WD04","RS170_WD06","RS170_WE03","RS170_WE05","RS170_WE07","RS170_WE12","RS170_WG02","RS170_WG10","RS170_WG11","RS170_WH09"), 
+              c("RS180_WE07","RS180_WE08","RS180_WF01","RS180_WF02","RS180_WF03", "RS180_WF04","RS180_WF05","RS180_WF06","RS180_WF10","RS180_WF11"), 
+              c("RSBK01_WA03","RSBK01_WB03","RSBK01_WC07","RSBK01_WD05","RSBK01_WD07", "RSBK01_WD08","RSBK01_WD10","RSBK01_WD11","RSBK01_WF02","RSBK01_WH02")), diploid=TRUE) # we need to asign individuals again
 
 GENOME.class_small <- linkage.stats(GENOME.class_small) get.linkage(GENOME.class_small)[[1]] #shows results of LD tests in Population 1 
 get.linkage(GENOME.class_small)[[2]] #shows results of LD tests in Population 2 
