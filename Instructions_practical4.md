@@ -249,7 +249,7 @@ Now we just need to input our VCF. For this part, we will use another VCF file t
 GENOME.class <- readVCF("~/DIRECTORY_YOU_HAVE_THE_FILE/merged_allpops_biallelic_mac_TR_SK_CH_pve001_10mb.vcf.gz",numcols=10, tid="pve_haplotypeT_001", from=1, to=10000000, approx=FALSE, out="", parallel=FALSE, gffpath=FALSE)
 ```
 
-Note that the program will require a binary-compressed VCF file (*vcf.gz) and its index (*vcf.gz.tbi) and that one needs to specify the chrosome (tid="pve_haplotypeT_001").
+Note that the program will require a binary-compressed VCF file (*vcf.gz) and its index (*vcf.gz.tbi) in the same directory and that one needs to specify the chrosome (tid="pve_haplotypeT_001").
 
 If you get the following error, you might need to reduce the 'numcols=100' option:
 
