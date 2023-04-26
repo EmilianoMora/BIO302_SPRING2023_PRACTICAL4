@@ -29,7 +29,7 @@ FORMAT/DP < 400
 QUAL > 100
 ```
 
-**Update:** Irina found out how to run several filters in the same command in Galaxy!! Just to it as follow:
+**Update:** Irina found out how to run several filters in the same command in Galaxy!! Just do it as follow:
 
 ```
 QD > 2.0 & FS < 60.0  & MQ > 40.0 & MQRankSum > -12.5 & ReadPosRankSum > -8.0 & FORMAT/DP > 10 & FORMAT/DP < 400  & QUAL > 100
@@ -251,6 +251,23 @@ install.packages("~/DIRECTORY_YOU_HAVE_THE_FILE/PopGenome_2.7.5.tar.gz", repos=N
 library(PopGenome_2.7.5.tar.gz) #To check if it installed correctly
 ```
 
+SOME Windows users might have some errors and might need to install another package called 'ff'. If you have that problem you can just do:
+
+```
+install.packages('ff')
+library(ff) 
+```
+
+Now you can try again to install PopGenome again as indicated above. If you get another that says something like this:
+
+```
+...
+Warning in system(cmd) : 'make' not found
+...
+```
+
+You will need to install the Rtools in Rstudio. You can see the instructions in this [page](https://cran.r-project.org/bin/windows/Rtools/rtools40.html). Make sure you are installing  R-4.0.0 and to follow the instructions that are there. Specially the instructions in the **Putting Rtools on the PATH** section. ONce you have Rtools installed, then you can try to install PopGenome indicated as above.
+
 Now we just need to input our VCF. For this part, we will use another VCF file that is very similar the one you have been working on but with some filters that I've done myself. This VCF file has 30 individuals from three populations (RS170=Turkey, RS180=Slovakia, and RSBK01=Swizterland). This file only include SNP data from the first 10mb of the first chromosome. In order to input the file you just need to run the following command:
 
 **UPDATE: You can find the "vcf.gz" file and ".vcf.gz.tbi" in the same github page where you found the other files [here](https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/merged_allpops_biallelic_mac_TR_SK_CH_pve001_10mb.vcf.gz) and [here](https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/merged_allpops_biallelic_mac_TR_SK_CH_pve001_10mb.vcf.gz.tbi)**
@@ -291,7 +308,8 @@ One could estimate the genetic diversity with the following command:
 
 ```
 GENOME.class <- diversity.stats(GENOME.class) 
-get.diversity(GENOME.class)[[1]] #with this command you see all different estimates of genetic diversity that can be estimated GENOME.class@nuc.diversity.within #with this command you only get the estimate of nucleotide diversity
+get.diversity(GENOME.class)[[1]] #with this command you see all different estimates of genetic diversity that can be estimated
+GENOME.class@nuc.diversity.within #with this command you only get the estimate of nucleotide diversity
 ```
 
 Apparently the way nucleotide diversity is estimated in PopGenome still needs to be controlled by the number of sites analyzed. So in this case we need to divide the estimated 'nuc.diversity.within' by 10000000 (the number of sites used in our data).
@@ -318,7 +336,9 @@ Anyway, now that we asigned our individuals to the populations, we can estimate 
 
 ```
 GENOME.class <- diversity.stats(GENOME.class) 
-get.diversity(GENOME.class) [[1]] #shows results of genetic diversity in Population 1 get.diversity(GENOME.class) [[2]] #shows results of linkage diversity in Population 2 get.diversity(GENOME.class) [[3]] #shows results of linkage diversity in Population 3
+get.diversity(GENOME.class) [[1]] #shows results of genetic diversity in Population 1 
+get.diversity(GENOME.class) [[2]] #shows results of linkage diversity in Population 2 
+get.diversity(GENOME.class) [[3]] #shows results of linkage diversity in Population 3
 ```
 
 Again, we need to account for the number of sites used in our VCF files so ...
@@ -332,7 +352,10 @@ GENOME.class@nuc.diversity.within/10000000 #divide by the number of sites includ
 We can also run another set of population genetic tests that allows us to gain some information about the evolutionary history of the population. You can run the following commands:
 
 ```
-GENOME.class <- neutrality.stats(GENOME.class, FAST=TRUE) get.neutrality(GENOME.class)[[1]] #shows results of neutrality tests in Population 1 get.neutrality(GENOME.class)[[2]] #shows results of neutrality tests in Population 2 get.neutrality(GENOME.class)[[3]] #shows results of neutrality tests in Population 3
+GENOME.class <- neutrality.stats(GENOME.class, FAST=TRUE) 
+get.neutrality(GENOME.class)[[1]] #shows results of neutrality tests in Population 1 
+get.neutrality(GENOME.class)[[2]] #shows results of neutrality tests in Population 2 
+get.neutrality(GENOME.class)[[3]] #shows results of neutrality tests in Population 3
 ```
 
 Again, take a look at which population has the higher number of segregating (i.e., polymorphic sites). What does this mean?
@@ -343,7 +366,9 @@ We can also estimate the extent of linkage disequilibrium (LD). Based on the pre
 
 ```
 GENOME.class <- linkage.stats(GENOME.class) 
-get.linkage(GENOME.class)[[1]] #shows results of recombination tests in Population 1 get.linkage(GENOME.class)[[2]] #shows results of recombination tests in Population 2 get.linkage(GENOME.class)[[3]] #shows results of recombination tests in Population 3
+get.linkage(GENOME.class)[[1]] #shows results of recombination tests in Population 1 
+get.linkage(GENOME.class)[[2]] #shows results of recombination tests in Population 2 
+get.linkage(GENOME.class)[[3]] #shows results of recombination tests in Population 3
 ```
 
 There is a chance that this not run if you don't have enough memory on your computer. What we can do is to reduce the dataset to help our poor computers to run this commands.
@@ -353,7 +378,9 @@ GENOME.class_small <- readVCF("merged_allpops_biallelic_mac_TR_SK_CH_pve001_10mb
 
 GENOME.class_small <- set.populations(GENOME.class_small, list(c("RS170_WD04","RS170_WD06","RS170_WE03","RS170_WE05","RS170_WE07", "RS170_WE12","RS170_WG02","RS170_WG10","RS170_WG11","RS170_WH09"), c("RS180_WE07","RS180_WE08","RS180_WF01","RS180_WF02","RS180_WF03", "RS180_WF04","RS180_WF05","RS180_WF06","RS180_WF10","RS180_WF11"), c("RSBK01_WA03","RSBK01_WB03","RSBK01_WC07","RSBK01_WD05","RSBK01_WD07", "RSBK01_WD08","RSBK01_WD10","RSBK01_WD11","RSBK01_WF02","RSBK01_WH02")), diploid=TRUE) # we need to asign individuals again
 
-GENOME.class_small <- linkage.stats(GENOME.class_small) get.linkage(GENOME.class_small)[[1]] #shows results of LD tests in Population 1 get.linkage(GENOME.class_small)[[2]] #shows results of LD tests in Population 2 get.linkage(GENOME.class_small)[[3]] #shows results of LD tests in Population 3
+GENOME.class_small <- linkage.stats(GENOME.class_small) get.linkage(GENOME.class_small)[[1]] #shows results of LD tests in Population 1 
+get.linkage(GENOME.class_small)[[2]] #shows results of LD tests in Population 2 
+get.linkage(GENOME.class_small)[[3]] #shows results of LD tests in Population 3
 ```
 
 Now it should have runned. If it didn't, your computer might be too weak for the job.
@@ -382,25 +409,36 @@ GENOME.class.slide_1kb <- sliding.window.transform(object = GENOME.class, width 
 Now we can tell the package to estimate Fst on each of these windows with the following commands:
 
 ```
-slide_1kb <- diversity.stats(GENOME.class.slide_1kb) #First we need some estimates of genetic diveristy before doing the Fst slide_1kb <- F_ST.stats(slide_1kb, mode="nucleotide") #Now here we tell R to estimate Fst on every window slide_1kb@nuc.F_ST.pairwise
+slide_1kb <- diversity.stats(GENOME.class.slide_1kb) #First we need some estimates of genetic diveristy before doing the 
+Fst slide_1kb <- F_ST.stats(slide_1kb, mode="nucleotide") #Now here we tell R to estimate Fst on every window 
+slide_1kb@nuc.F_ST.pairwise
 ```
 
 The results should look like a pairwise table among the three populations and per window. However, sisnce we have too many windows this looks like a mess. So we run the following command to make it look prettier:
 
 ```
-pairwise.FST_1kb <- t(slide_1kb@nuc.F_ST.pairwise) pairwise.FST_1kb #Now take a look each row is a window and each column is the comparison each population against another one. #The 't(xxx)' in t(slide_1kb@nuc.F_ST.pairwise) is to transpose the table
+pairwise.FST_1kb <- t(slide_1kb@nuc.F_ST.pairwise) 
+pairwise.FST_1kb #Now take a look each row is a window and each column is the comparison each population against another one. #The 't(xxx)' in t(slide_1kb@nuc.F_ST.pairwise) is to transpose the table
 ```
 
 Since we input 10 million bpfrom our VCF, and we have windows of 1000, then we should have 1000 windows (10000000 sites/1000 bp window size). We can check this with the following command:
 
 ```
-length(GENOME.class.slide_1kb@region.names) #if you change the window size in 'GENOME.class.slide_1kb <- sliding.window.transform(object = GENOME.class, width = 1000, jump = 1000, type=2)' then thiscomamnd tell you how many windows you have.
+length(GENOME.class.slide_1kb@region.names) #if you change the window size in 'GENOME.class.slide_1kb <- sliding.window.transform(object = GENOME.class, width = 1000, jump = 1000, type=2)' then this comamnd tell you how many windows you have.
 ```
 
 Now we are going to plot the results with the following commands:
 
 ```
-ids <- 1:10000 #adjust for the number of windows loess.fst_pop1_pop2_1kb <- loess(pairwise.FST_1kb[,1] ~ ids, span=0.05) loess.fst_pop1_pop3_1kb <- loess(pairwise.FST_1kb[,2] ~ ids, span=0.05) loess.fst_pop2_pop3_1kb <- loess(pairwise.FST_1kb[,3] ~ ids, span=0.05) plot(predict(loess.fst_pop1_pop2_1kb), type = "l", xaxt="n", xlab="Position (Mb)", ylab="Fst", main = "Chromosome 1 (1kb windows)", ylim=c(0,1)) lines(predict(loess.fst_pop1_pop2_1kb), col="blue") lines(predict(loess.fst_pop1_pop3_1kb), col="red") lines(predict(loess.fst_pop2_pop3_1kb), col="green") axis(1,c(1,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000), c("0","1","2","3","4","5","6","7","8","9","10"))
+ids <- 1:10000 #adjust for the number of windows 
+loess.fst_pop1_pop2_1kb <- loess(pairwise.FST_1kb[,1] ~ ids, span=0.05) 
+loess.fst_pop1_pop3_1kb <- loess(pairwise.FST_1kb[,2] ~ ids, span=0.05) 
+loess.fst_pop2_pop3_1kb <- loess(pairwise.FST_1kb[,3] ~ ids, span=0.05) 
+plot(predict(loess.fst_pop1_pop2_1kb), type = "l", xaxt="n", xlab="Position (Mb)", ylab="Fst", main = "Chromosome 1 (1kb windows)", ylim=c(0,1)) lines(predict(loess.fst_pop1_pop2_1kb), col="blue") 
+lines(predict(loess.fst_pop1_pop3_1kb), col="red") 
+lines(predict(loess.fst_pop2_pop3_1kb), col="green") 
+axis(1,c(1,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000), 
+c("0","1","2","3","4","5","6","7","8","9","10"))
 ```
 
 **Question:** Do you know what each of these commands is doing? Can you change the colors of the populations? Based on the results of genetic diversity and global Fst, what do you expect in this result? Which population is the most genetically differentiated?
