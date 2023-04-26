@@ -392,7 +392,7 @@ ids <- 1:10000 #adjust for the number of windows loess.fst_pop1_pop2_1kb <- loes
 
 Now that you know how to run a Fst analysis along the genome, do the same analysis to estimate genetic diveristy (nucleotide diversity) using windows.
 
-# Simulating Genetic Drift and Natural selection with learnPopGen
+# Simulating Genetic Drift and Natural Selection with learnPopGen
 
 Great! you reached the final part of the practical! I have no idea how long is this going to take you ideally you would ask stuff that you dont understand and so.
 
