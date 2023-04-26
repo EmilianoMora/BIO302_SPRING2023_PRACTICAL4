@@ -107,7 +107,9 @@ This generates four outputs:
 - run_K_1.mainparams
 - run_K_1.extraparams
 
-When running Structure, we need to assume a range of populations or clusters (**K**) and later find out which number of clusters is best explaining the genetic variation in our data. Therefore, you need to repeat the Structure run again, each time for a different K value (*Number of populations assumed*): K=2, 3, 4 and 5. All other parameters are kept the same as for K=1.
+When running Structure, we need to assume a range of populations or clusters (**K**) and later find out which number of clusters is best explaining the genetic variation in our data. Therefore, **you need to repeat the Structure run again, each time for a different K value (*Number of populations assumed*): K=2, 3, 4 and 5. All other parameters are kept the same as for K=1.**
+
+**This part might take a while (~45min) to run in Galaxy so you can move on to the next step "Analzying population structure with: Principal Components Analyses (PCA)" and start working on that and then come back to the STRUCTURE results**
 
 ## Visualizing the Structure results
 Download the run_K_x.out files to your computer. If they are zipped, unzip them. You should have the following files on your computer:
