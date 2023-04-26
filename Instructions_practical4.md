@@ -29,6 +29,13 @@ FORMAT/DP < 400
 QUAL > 100
 ```
 
+**Update:** Irina found out how to run several filters in the same command in Galaxy!! Just to it as follow:
+
+```
+QD > 2.0 & FS < 60.0  & MQ > 40.0 & MQRankSum > -12.5 & ReadPosRankSum > -8.0 & FORMAT/DP > 10 & FORMAT/DP < 400  & QUAL > 100
+```
+
+
 If you want to know more about what do these and other argument means, you can look [here](https://gatk.broadinstitute.org/hc/en-us/articles/360035890471-Hard-filtering-germline-short-variants).
 
 **Hint:** If you want to use the 'Exclude' option you will just need to flip the '> or <' around.
