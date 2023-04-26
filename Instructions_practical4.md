@@ -4,7 +4,7 @@ In your second practical session you did a variant calling. Just as a reminder y
 
 Often after the variant calling we end up with a very messy and long VCF file that is full of sequencing errors, genotyping errors during variant calling, some invariant sites that tell nothing about diversity and so on. So we need to do some cleaning of the VCF file to keep high quality sequencing sites so that we can perform some analyses.
 
-For this paer of the practical you will use the file called 'BIO302_practical_filtering.vcf.gz' that I sent you in the email. You can download the file [here](https://wetransfer.com/downloads/f95a2d784ff8c6eb2b43c8fcccb3ac9020230424070021/c59faa7fd8ec72778f2551a7543b619120230424070041/1febb0).
+For this paer of the practical you will use the file called 'BIO302_practical_filtering.vcf' that I sent you in the email. You can download the file [here](https://wetransfer.com/downloads/f95a2d784ff8c6eb2b43c8fcccb3ac9020230424070021/c59faa7fd8ec72778f2551a7543b619120230424070041/1febb0).
 
 Upload this file into your Galaxy account.
 
@@ -60,6 +60,7 @@ With this VCF file we can now do a lot of population genetic analyses.
 
 **Note:** Filtering is one of the most important parts because bad filtering can lead to bad results. Sometimes is hard to know how hard do we need to be in our filtering. IF we filter TOO much, we might end up with almost no sites for our population genetic analyses. However, very light filtering could give us very misleading results.
 
+
 # Analzying population structure with: STRUCTURE
 
 **Background**
@@ -67,6 +68,8 @@ To investigate the genetic structure of a population from genotype data we use o
 You can read more about Structure in the overview article [here](https://www.frontiersin.org/articles/10.3389/fgene.2013.00098/full). *You can find this article also on OLAT.*
 
 ## Running Structure on Galaxy 
+
+**To download the files in the links below just click on the link of the file and then click in 'Raw'. That will display the file in your computer. Once the file is displayed, you can use right click and do 'Save as ...'**
 
 Download the structure file from [this link](https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/SNPs_mac_TR_SK_CH_pve001_var_832_3pop.tsv) and upload it to your Galaxy history. Change the format to **tsv** (click on the pencil icon, convert, set **New Type** as **tsv** and save).
 From Tools panel, choose [**Structure** using multi-locus genotype data to investigate population structure](https://usegalaxy.eu/root?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/structure/structure/2.3.4+galaxy1)
