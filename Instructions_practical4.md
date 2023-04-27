@@ -1,10 +1,6 @@
 # Road map for population genomic analyses
 
-
-
-
 ![My Image](roadmap.jpg)
-
 
 # VCF filtering
 
@@ -266,7 +262,7 @@ Warning in system(cmd) : 'make' not found
 ...
 ```
 
-You will need to install the Rtools in Rstudio. You can see the instructions in this [page](https://cran.r-project.org/bin/windows/Rtools/rtools40.html). Make sure you are installing  R-4.0.0 and to follow the instructions that are there. Specially the instructions in the **Putting Rtools on the PATH** section. ONce you have Rtools installed, then you can try to install PopGenome indicated as above.
+**Thanks to Phillip for figuring out this**: You will need to install the Rtools in Rstudio. You can see the instructions in this [page](https://cran.r-project.org/bin/windows/Rtools/rtools40.html). Make sure you are installing  R-4.0.0 and to follow the instructions that are there. Specially the instructions in the **Putting Rtools on the PATH** section. ONce you have Rtools installed, then you can try to install PopGenome indicated as above.
 
 Now we just need to input our VCF. For this part, we will use another VCF file that is very similar the one you have been working on but with some filters that I've done myself. This VCF file has 30 individuals from three populations (RS170=Turkey, RS180=Slovakia, and RSBK01=Swizterland). This file only include SNP data from the first 10mb of the first chromosome. In order to input the file you just need to run the following command:
 
