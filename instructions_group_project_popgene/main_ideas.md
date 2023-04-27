@@ -27,6 +27,7 @@ What are you expected to do in this project:
 - Make the variant calling with bcftools
 - Filter the VCF file with bcftools
 - Do a STRUCTURE and PCA analyses
+#When you want to do the population genetics analyses, let me know because we might need to do something to the files.
 - Perform analyses the genetic diversity of the populations
 
 If there is time (and you are interested):
