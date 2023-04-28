@@ -391,7 +391,8 @@ Now it should have runned. If it didn't, your computer might be too weak for the
 Anyways, we can also estimate the genetic differentiation (Fst) of the three populations with the following commands:
 
 ```
-GENOME.class <- F_ST.stats(GENOME.class) get.F_ST(GENOME.class) #Show all estimates of Fst
+GENOME.class <- F_ST.stats(GENOME.class) 
+get.F_ST(GENOME.class) #Show all estimates of Fst
 ```
 
 As you can see, the estimates of genetic differentiation can be quite different from each other. This is because the way we measure genetic differentiation can be biased by the genetic diveristy of the population. For instance Fst can be inflated by low (or high) genetic diveristy of the population, whereas Gst controls for the genetic diversity of each population. See the following results:
