@@ -41,13 +41,13 @@ For the mapping and variant calling you can look into [this tutorial]( https://g
 
 Key papers to read:
 
--**Li et al. 2016. Genetic architecture and evolution of the S locus supergene in Primula vulgaris. Nature Plants 12:1-7**
+-Li et al. 2016. Genetic architecture and evolution of the S locus supergene in Primula vulgaris. Nature Plants 12:1-7
 -Wright et al. 2013. Evolutionary consequences of self-fertilization in plants. Proceedings of the Royal Society B: Biological Sciences. 280: 20130133
--**Wright et al. 2008. Genomic Consequences of Outcrossing and Selfing in Plants.**
--**Laenen et al. 2018. Demography and mating system shape the genome-wide impact of purifying selection in Arabis alpina.**
+-Wright et al. 2008. Genomic Consequences of Outcrossing and Selfing in Plants.
+-Laenen et al. 2018. Demography and mating system shape the genome-wide impact of purifying selection in Arabis alpina.
 -Bachmann et al. 2019. Genetic basis and timing of a major mating system shift in Capsella. New Phytologist, 224: 505-517 
 -Sicard A, Lenhard M. 2011. The selfing syndrome: a model for studying the genetic and evolutionary basis of morphological adaptation in plants. Annals of Botany. 107:1433–43.
 -González-Martínez et al. 2017. Range Expansion Compromises Adaptive Evolution in an Outcrossing Plant. Current Biology
--**Huu et al. 2016. Presence versus absence of CYP734A50 underlies the style-length dimorphism in primroses. eLife**
+-Huu et al. 2016. Presence versus absence of CYP734A50 underlies the style-length dimorphism in primroses. eLife
 -Stubbs et al. 2022. Whole-genome analyses disentangle reticulate evolution of primroses in a biodiversity hotspot. New Phytologist.
--**Mora-Carrera et al. 2021. Different molecular changes underlie the same phenotypic transition: Origins and consequences of independent shifts to homostyly within species. Molecular Ecology**
+-Mora-Carrera et al. 2021. Different molecular changes underlie the same phenotypic transition: Origins and consequences of independent shifts to homostyly within species. Molecular Ecology
