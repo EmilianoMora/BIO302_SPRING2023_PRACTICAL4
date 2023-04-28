@@ -40,6 +40,7 @@ If there is time (and you are interested):
 For the mapping and variant calling you can look into [this tutorial]( https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/instructions_group_project_popgene/mapping_variantcall.md). For the VCF filtering and population genetic analyses you can look in the [tutorial of practical session 4](https://github.com/EmilianoMora/BIO302_SPRING2023_PRACTICAL4/blob/main/Instructions_practical4.md).
 
 Key papers to read:
+
 **- Li et al. 2016. Genetic architecture and evolution of the S locus supergene in Primula vulgaris. Nature Plants 12:1-7**
 - Wright et al. 2013. Evolutionary consequences of self-fertilization in plants. Proceedings of the Royal Society B: Biological Sciences. 280: 20130133
 **- Wright et al. 2008. Genomic Consequences of Outcrossing and Selfing in Plants.**
