@@ -297,7 +297,8 @@ get.sum.data(GENOME.class)
 You can also take a look at specific information such as the number of sites (n.sites) or the number of biallelic sites (n.biallelic.sites) wiht the following commands:
 
 ```
-GENOME.class@n.sites#number of sites GENOME.class@n.biallelic.sites#number of biallelic sites
+GENOME.clas@n.sites#number of sites 
+GENOME.clas@n.biallelic.sites#number of biallelic sites
 ```
 
 One could estimate the genetic diversity with the following command:
