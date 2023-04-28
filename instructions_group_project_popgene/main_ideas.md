@@ -41,6 +41,7 @@ For the mapping and variant calling you can look into [this tutorial]( https://g
 
 Key papers to read:
 
+```
 -Li et al. 2016. Genetic architecture and evolution of the S locus supergene in Primula vulgaris. Nature Plants 12:1-7
 -Wright et al. 2013. Evolutionary consequences of self-fertilization in plants. Proceedings of the Royal Society B: Biological Sciences. 280: 20130133
 -Wright et al. 2008. Genomic Consequences of Outcrossing and Selfing in Plants.
@@ -51,3 +52,4 @@ Key papers to read:
 -Huu et al. 2016. Presence versus absence of CYP734A50 underlies the style-length dimorphism in primroses. eLife
 -Stubbs et al. 2022. Whole-genome analyses disentangle reticulate evolution of primroses in a biodiversity hotspot. New Phytologist.
 -Mora-Carrera et al. 2021. Different molecular changes underlie the same phenotypic transition: Origins and consequences of independent shifts to homostyly within species. Molecular Ecology
+```
