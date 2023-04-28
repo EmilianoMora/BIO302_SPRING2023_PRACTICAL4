@@ -439,7 +439,8 @@ ids <- 1:10000 #adjust for the number of windows
 loess.fst_pop1_pop2_1kb <- loess(pairwise.FST_1kb[,1] ~ ids, span=0.05) 
 loess.fst_pop1_pop3_1kb <- loess(pairwise.FST_1kb[,2] ~ ids, span=0.05) 
 loess.fst_pop2_pop3_1kb <- loess(pairwise.FST_1kb[,3] ~ ids, span=0.05) 
-plot(predict(loess.fst_pop1_pop2_1kb), type = "l", xaxt="n", xlab="Position (Mb)", ylab="Fst", main = "Chromosome 1 (1kb windows)", ylim=c(0,1)) lines(predict(loess.fst_pop1_pop2_1kb), col="blue") 
+plot(predict(loess.fst_pop1_pop2_1kb), type = "l", xaxt="n", xlab="Position (Mb)", ylab="Fst", main = "Chromosome 1 (1kb windows)", ylim=c(0,1))
+lines(predict(loess.fst_pop1_pop2_1kb), col="blue") 
 lines(predict(loess.fst_pop1_pop3_1kb), col="red") 
 lines(predict(loess.fst_pop2_pop3_1kb), col="green") 
 axis(1,c(1,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000), 
