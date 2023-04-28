@@ -381,7 +381,8 @@ GENOME.class_small <- set.populations(GENOME.class_small,
               c("RS180_WE07","RS180_WE08","RS180_WF01","RS180_WF02","RS180_WF03", "RS180_WF04","RS180_WF05","RS180_WF06","RS180_WF10","RS180_WF11"), 
               c("RSBK01_WA03","RSBK01_WB03","RSBK01_WC07","RSBK01_WD05","RSBK01_WD07", "RSBK01_WD08","RSBK01_WD10","RSBK01_WD11","RSBK01_WF02","RSBK01_WH02")), diploid=TRUE) # we need to asign individuals again
 
-GENOME.class_small <- linkage.stats(GENOME.class_small) get.linkage(GENOME.class_small)[[1]] #shows results of LD tests in Population 1 
+GENOME.class_small <- linkage.stats(GENOME.class_small) 
+get.linkage(GENOME.class_small)[[1]] #shows results of LD tests in Population 1 
 get.linkage(GENOME.class_small)[[2]] #shows results of LD tests in Population 2 
 get.linkage(GENOME.class_small)[[3]] #shows results of LD tests in Population 3
 ```
