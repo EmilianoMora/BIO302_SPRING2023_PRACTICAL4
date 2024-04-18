@@ -453,9 +453,9 @@ Now that you know how to run a Fst analysis along the genome, do the same analys
 
 # Simulating Genetic Drift and Natural Selection with learnPopGen
 
-Great! you reached the final part of the practical! I have no idea how long is this going to take you ideally you would ask stuff that you dont understand and so.
+Great! you reached the final part of the practical! I have no idea how long is this going to take you. Ideally you would ask stuff that you don't understand and so.
 
-Now, in class we saw some of the evolutionary forces that shape the genome. If you remember, I made emphasis in two evolutionary forces, Natural selection and Genetic drift. Some population genetisis consider these two as the most important shaping the complexity of the genome. It sometimes is not easy to understand their effects when they are both working at the same time. A good way to wrap our head around these evolutionary forces is to visualize it. Now close your eyes and imagine Genetic Drift ... haha just kidding you cannot imagine Genetic Drift. What we are going to do is run some simulation using the R package learnPopGen. This package can be downloaded in R and runned through the command line in Rstudio. However, this package also has a shiny interface on the internet that makes everything more easy, so follow the link:
+Now, in class we saw some of the evolutionary forces that shape the genome. If you remember, I made emphasis in two evolutionary forces, Natural selection and Genetic drift. Some population geneticists consider these two as the most important shaping the complexity of the genome. It sometimes is not easy to understand their effects when they are both working at the same time. A good way to wrap our head around these evolutionary forces is to visualize it. Now close your eyes and imagine Genetic Drift ... ha!!! just kidding you cannot imagine Genetic Drift. What we are going to do is run some simulation using the R package learnPopGen. This package can be downloaded in R and runned through the command line in Rstudio. However, this package also has a shiny interface on the internet that makes everything more easy, so follow the link:
 
 http://www.phytools.org/PopGen/
 
